@@ -9,6 +9,7 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserCredentialModel;
 import org.keycloak.models.UserModel;
 import org.keycloak.models.credential.PasswordUserCredentialModel;
+import org.keycloak.models.utils.HmacOTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,10 @@ public class MySpiTest  implements Authenticator {
         authenticationFlowContext.resetFlow();
 
         log.info("just want to write a log !!!");
+
+        // generate QR
+        final String totpSecret = HmacOTP.generateSecret(20);
+        log.info("totpSecret = {}", totpSecret);
 
         authenticationFlowContext.success();;
     }
