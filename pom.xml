@@ -10,7 +10,7 @@
 
 
     <properties>
-        <keycloak.version>4.8.3.Final</keycloak.version>
+        <keycloak.version>15.1.0</keycloak.version>
 
         <version.maven-bundle-plugin>2.3.7</version.maven-bundle-plugin>
         <version.maven-compiler-plugin>3.5.1</version.maven-compiler-plugin>
